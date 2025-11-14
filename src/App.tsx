@@ -1,28 +1,15 @@
-import { useState, useEffect } from "react";
+import PokemonList from "./components/PokemonList";
+import './App.css';
 
-const apiEndpoint = "https://pokeapi.co/api/v2/pokemon";
-const limit = 10;
-
-interface Pokemon {
-  name: string;
-}
-
-function App() {
-  const [data, setData] = useState<Pokemon[]>([]);
-
-  useEffect(() => {
-    fetch(`${apiEndpoint}?limit=${limit}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data.results);
-      });
-  }, []);
-
+export default function App() {
   return (
-    <div>
-      <h1>Pokémon List</h1>
-    </div>
+    <>
+      <div className="place-items-center h-screen">
+        <header className="title text-2xl font-bold p-10">Pokémon List</header>
+        <main>
+          <PokemonList/>
+        </main>
+      </div>
+    </>
   );
 }
-
-export default App;
