@@ -17,7 +17,7 @@
 <!-- Optional -->
 
 ## Checklist
-- [ x] I have tested my changes
+- [ ] I have tested my changes
 - [ ] I updated documentation (if needed)
 - [ ] I followed the code style guidelines
 - [ ] No new warnings or errors
